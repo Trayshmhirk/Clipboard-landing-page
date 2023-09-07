@@ -1,0 +1,374 @@
+/*Base styles*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-size: 18px;
+    --text-color: hsl(201, 11%, 66%);
+    --text-head-color: hsl(210, 10%, 33%);
+    --ios-bttn-color: hsl(171, 66%, 44%);
+    --ios-box-shadow: 0px 7px 10px hsla(171, 66%, 44%, 0.377);
+    --mac-bttn-color: hsl(233, 100%, 69%);
+    --mac-box-shadow: 0px 7px 10px hsla(233, 100%, 69%, 0.377);
+    --footer-bg-color: rgb(239, 242, 245);
+}
+
+/*General Styles*/
+
+body{
+    background: url(images/bg-header-desktop.png) no-repeat;
+    background-size: contain;
+    font-size: var(--font-size);
+    color: var(--text-color);
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+    line-height: 1.85;
+}
+
+h1, h2, h3{
+    color: var(--text-head-color);
+    font-weight: 600;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.button > button{
+    color: #fff;
+    height: 3em;
+    padding: 0em 2em;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-out,
+    opacity 250ms ease-out;
+}
+
+.button > .ios{
+    background: var(--ios-bttn-color);
+    box-shadow: var(--ios-box-shadow);
+    border-bottom: 4px solid hsl(171, 76%, 33%);
+}
+
+.button > .mac{
+    background: var(--mac-bttn-color);
+    box-shadow: var(--mac-box-shadow);
+    border-bottom: 4px solid hsl(233, 58%, 54%);
+}
+
+.button > .ios:hover,
+.button > .mac:hover{
+    box-shadow: none;
+    opacity: .7;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-head-color);
+    transition: color 300ms ease-out;
+}
+
+a:hover{
+    color: var(--ios-bttn-color);
+}
+
+/* Body Content */
+
+header{
+    margin: 8em auto;
+    margin-top: 6em;
+    max-width: 700px;
+    margin-bottom: 10em;
+}
+
+header > img.logo{
+    width: 5em;
+    margin-bottom: 2em;
+}
+
+header > h1{
+    margin-bottom: .3em;
+}
+
+header > p{
+    margin-bottom: 2em;
+    font-size: 1.05em;
+}
+
+/* Snippet Section */
+
+section.snippet{
+    margin: 4em auto;
+    max-width: 725px;
+    margin-top: 8em;
+}
+
+section.snippet > h2{
+    margin-bottom: .5em;
+}
+
+section.snippet > p{
+    font-size: .96em;
+}
+
+/* Mac-image Section */
+
+section.mac-image{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    margin-bottom: 10em;
+}
+
+section.mac-image .mac-book{
+    width: 52%;
+    transform: translateX(-2em);
+}
+
+section.mac-image > div{
+    max-width: 425px;
+}
+
+section.mac-image > div > .mac-txt{
+    margin: 3em 0;
+}
+
+section.mac-image > div > .mac-txt h3{
+    margin-bottom: .3em;
+}
+
+/* Access-clip Section */
+
+section.access-clip{
+    margin: 0em auto;
+    margin-bottom: 6em;
+}
+
+section.access-clip > div{
+    margin: 0em auto;
+    max-width: 750px;
+    margin-bottom: 2em;
+}
+
+section.access-clip h2{
+    margin-bottom: .5em;
+}
+
+/* Supercharge Section */
+
+section.supercharge{
+    margin-bottom: 8em;
+}
+
+section.supercharge > h2{
+    margin-bottom: .3em;
+}
+
+section.supercharge > .charge-flex{
+    display: flex;
+    margin: 4em auto;
+    width: 75%;
+}
+
+section.supercharge > .charge-flex > div{
+    width: 400px;
+    margin: 0em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    font-size: .9em;
+    padding: 0em .5em;
+}
+
+.charge-flex > div img{
+    width: 2em;
+    align-self: center;
+}
+
+.charge-flex > .preview img{
+    padding-bottom: .5em;
+}
+
+/* Company Logos */
+
+section.company-logos{
+    margin: 8em auto;
+}
+
+section.company-logos > img{
+    margin: 0em 2.8em;
+    vertical-align: middle;
+}
+
+/* Clipboard Section*/
+
+section.clipboard{
+    margin: 8em auto;
+    max-width: 750px;
+}
+
+section.clipboard h2{
+    margin-bottom: .5em;
+}
+
+section.clipboard p{
+    margin-bottom: 2.5em;
+}
+
+/* Footer */
+
+footer{
+    background: var(--footer-bg-color);
+    display: flex;
+    height: 7em;
+    align-items: center;
+    padding: 2em 5em;
+}
+
+footer > img{
+    width: 3em;
+    height: 3em;
+    margin-right: 6em;
+}
+
+footer > .other-pages{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    width: 450px;
+    margin-right: auto;
+    font-size: .85em;
+}
+
+footer > .other-pages div{
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .social-links a{
+    margin: 0em .5em;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+
+    section.access-clip > img{
+        width: 95%;
+    }
+
+    section.company-logos > img{
+        margin: 0em 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        font-size: 17px;
+    }
+
+    .container{
+        padding: 0em 1.5em;
+    }
+
+    header, section.snippet,
+    section.access-clip > div,
+    section.supercharge > .charge-flex,
+    section.clipboard{
+        max-width: 450px;
+    }
+
+    header > p,
+    section.snippet > p,
+    section.clipboard p,
+    section.mac-image > div > .mac-txt p,
+    section.access-clip p{
+        font-size: .9em;
+    }
+
+    section.mac-image{
+        flex-direction: column;
+        text-align: center;
+        gap: 2em;
+    }
+    
+    section.mac-image .mac-book{
+        width: 90%;
+        transform: none;
+    }
+
+    section.mac-image > div > .mac-txt{
+        margin: 2em 0;
+    }
+
+    section.supercharge > .charge-flex{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section.supercharge > .charge-flex > div{
+        width: 100%;
+        margin: 1em auto;
+        gap: 1em;
+        padding: 0em;
+    }
+
+    section.company-logos > img{
+        margin: 5em auto;
+        display: block;
+        
+    }
+
+    footer{
+        flex-direction: column;
+        height: unset;
+        padding: 3em;
+    }
+
+    footer > img{
+        margin: 0;
+        margin-bottom: 2em;
+    }
+
+    footer > .other-pages{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        font-size: 1em;
+        gap: 1em;
+    }
+    
+    footer > .other-pages div{
+        gap: 1em;
+    }
+
+    footer > .social-links{
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 561px){
+    body{
+        background: url(images/bg-header-mobile.png) no-repeat;
+        background-size: contain;
+    }
+
+    .button{
+        flex-direction: column;
+        gap: 2em;
+    }
+}
